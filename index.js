@@ -12,7 +12,7 @@ const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TO
 // Rota básica para teste
 app.get('/', (req, res) => {
     console.log('Recebido GET /');
-    res.status(200).send('Tudo funcionandoooooo');
+    res.status(200).send('Tudo funcionando');
   });
 
 // Rota de envio de mensagem
