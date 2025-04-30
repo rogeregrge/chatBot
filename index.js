@@ -19,9 +19,9 @@ app.get('/', (req, res) => {
 app.get('/send', async (req, res) => {
   try {
     const message = await client.messages.create({
-      body: 'Olá! Aqui é a Super Expansão. Temos uma nova entrega para você!',
+      body: 'Olá! Aqui é o bot da super expansão, se você recebeu essa mensagem esta funcionando!',
       from: process.env.TWILIO_WHATSAPP_NUMBER,
-      to: 'whatsapp:+5511959625178'
+      to: 'whatsapp:+5511983060089'
     });
     res.send('Message Delivered! SID: ' + message.sid);
   } catch (err) {
