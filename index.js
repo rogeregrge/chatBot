@@ -11,8 +11,9 @@ const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TO
 
 // Rota básica para teste
 app.get('/', (req, res) => {
-  res.send('Bot WhatsApp ativo!');
-});
+    console.log('Recebido GET /');
+    res.status(200).send('Tudo funcionando');
+  });
 
 // Rota de envio de mensagem
 app.get('/send', async (req, res) => {
