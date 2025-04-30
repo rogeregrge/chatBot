@@ -19,14 +19,14 @@ app.get('/', (req, res) => {
 app.get('/send', async (req, res) => {
   try {
     const message = await client.messages.create({
-      body: 'Hello from Super Expansão!',
+      body: 'Olá! Aqui é a Super Expansão. Temos uma nova entrega para você!',
       from: process.env.TWILIO_PHONE_NUMBER,
-      to: 'whatsapp:+5511959625178'
+      to: 'whatsapp:+55SEUNUMEROAQUI'
     });
-    res.send('Message Delivered! ' + message.sid);
+    res.send('Message Delivered! SID: ' + message.sid);
   } catch (err) {
-    console.error(err);
-    res.status(500).send('Error when sending message');
+    console.error('❌ Erro ao enviar mensagem:', err);  // <-- Mostra erro real
+    res.status(500).send('Erro ao enviar mensagem');
   }
 });
 
