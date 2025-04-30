@@ -21,7 +21,7 @@ app.get('/send', async (req, res) => {
     const message = await client.messages.create({
       body: 'Olá! Aqui é a Super Expansão. Temos uma nova entrega para você!',
       from: process.env.TWILIO_WHATSAPP_NUMBER,
-      to: 'whatsapp:+55SEUNUMEROAQUI'
+      to: 'whatsapp:+5511959625178'
     });
     res.send('Message Delivered! SID: ' + message.sid);
   } catch (err) {
