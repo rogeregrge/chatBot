@@ -89,4 +89,9 @@ app.get('/send', async (req, res) => {
     res.status(500).send('Erro ao enviar mensagem');
   }
 });
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Servidor rodando na porta ${PORT}`);
+});
 ;
